@@ -1,5 +1,3 @@
-
-
 name: Build and deploy ASP.Net Core Package 
 
 env:
@@ -20,6 +18,9 @@ jobs:
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: ${{ env.DOTNET_VERSION }}
+
+      - name: Onde estou
+        run: pwd
       
       - name: Lista arquivos
         run: ls -l
