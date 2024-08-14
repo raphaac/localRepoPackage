@@ -22,7 +22,7 @@ jobs:
           dotnet-version: ${{ env.DOTNET_VERSION }}
 
       - name: Build with dotnet
-        run: dotnet build /. --configuration Release
+        run: dotnet build --configuration Release
 
       - name: dotnet create package
         run: dotnet publish -c Release -o /publish
