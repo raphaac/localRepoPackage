@@ -20,6 +20,9 @@ jobs:
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: ${{ env.DOTNET_VERSION }}
+      
+      - name: Lista arquivos
+        run: ls -l
 
       - name: Build with dotnet
         run: dotnet build --configuration Release
