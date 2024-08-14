@@ -22,7 +22,7 @@ jobs:
           dotnet-version: ${{ env.DOTNET_VERSION }}
 
       - name: Build with dotnet
-        run: dotnet build --configuration Release
+        run: dotnet build /. --configuration Release
 
       - name: dotnet create package
         run: dotnet publish -c Release -o /publish
@@ -36,4 +36,4 @@ jobs:
 
     steps:
       - name: Publish Package        
-        run: dotnet nuget push .\dist\* --api-key ${{secrets.GITHUB_API_KEY_PACKAGE}} --source https://nuget.pkg.github.com/raphaac/index.json             
+        run: dotnet nuget push .\dist\* --api-key ${{secrets.API_KEY_PACKAGE}} --source https://nuget.pkg.github.com/raphaac/index.json             
